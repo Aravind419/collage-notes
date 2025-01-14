@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #121212, #2575fc);
   color: white;
   overflow:auto;
 }
@@ -42,7 +42,7 @@ h3 {
   transform: scale(0.8); /* Shrink initially */
   animation: popUp 0.8s ease-out forwards;
   animation-delay: 1.5s; /* Button appears after headings */
-  background: linear-gradient(200deg, #6a11cb, #2575fc);
+  background: linear-gradient(200deg, #6a11cb, #2e2b2b);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -153,3 +153,7 @@ a {
   font-size: 12px;
   white-space: nowrap; /* Prevents wrapping */
 }
+
+
+//subject page style
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subject Resources</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1 id="subject-name"></h1>
+  </header>
+
+  <main>
+    <h2>Resources</h2>
+    <ul id="resources-list">
+      <!-- Populate resources dynamically -->
+    </ul>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const subjectCode = urlParams.get("code");
+
+      const subjects = {
+        CCS356: {
+          name: "Object Oriented Software Engineering",
+          resources: ["Lecture Notes", "Videos", "Assignments"],
+        },
+        OIE351: {
+          name: "Introduction to Industrial Engineering",
+          resources: ["E-books", "Case Studies", "Notes"],
+        },
+        // Add more subjects as needed
+      };
+
+      const subject = subjects[subjectCode];
+
+      if (subject) {
+        document.getElementById("subject-name").innerText = subject.name;
+        const resourcesList = document.getElementById("resources-list");
+        subject.resources.forEach((resource) => {
+          const li = document.createElement("li");
+          li.innerText = resource;
+          resourcesList.appendChild(li);
+        });
+      } else {
+        document.body.innerHTML = "<h1>Subject Not Found</h1>";
+      }
+    });
+  </script>
+</body>
+</html>
