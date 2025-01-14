@@ -51,8 +51,9 @@
     }
 
     /* Hover effect for button */
-    button:hover {
-      background: #e91e63;
+    #res:hover {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      transition: background 0.3s ease, transform 0.2s ease; 
       transform: scale(1.1); /* Slightly enlarge */
     }
 
