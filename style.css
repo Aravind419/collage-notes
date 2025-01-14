@@ -104,9 +104,10 @@ spam a:hover {
   color: #00aaff;
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .home {
     flex-direction: column;
+    text-align: center;
   }
   spam a {
     margin-bottom: 20px;
@@ -114,7 +115,7 @@ spam a:hover {
   spam a:last-child {
     margin-bottom: 0;
   }
-} */
+}
 a {
   text-decoration: none;
 }
