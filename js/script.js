@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cardContainer.innerHTML = `
       <div id="contact-form">
         <h2>Contact Us</h2>
-        <form action="/submit_contact" method="post">
+        <form action="https://formspree.io/f/xwppygbjs" method="post">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
           <label for="phone">Phone:</label>
