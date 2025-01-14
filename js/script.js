@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Network Security", code: "CCS354" },
     { name: "Multimedia and Animation", code: "CCS352" },
     { name: "3D Printing and Design", code: "CCS331" },
+    { name: "Well Being with Traditional Practices- Yoga, Ayurveda and Siddha", code: "Mx3085" },
     { name: "Mobile Application Development Lab", code: "IT3681" },
   ];
 
