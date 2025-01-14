@@ -6,147 +6,149 @@
     color: #fff;
 
 } */
- body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: white;
-      overflow: hidden;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  overflow: hidden;
+}
 
-    /* Animation for headings */
-    h1, h2, h3 {
-      opacity: 0;
-      transform: translateY(-50px); /* Initial position above */
-      animation: slideDown 1s ease-in-out forwards;
-    }
+/* Animation for headings */
+h1,
+h2,
+h3 {
+  opacity: 0;
+  transform: translateY(-50px); /* Initial position above */
+  animation: slideDown 1s ease-in-out forwards;
+}
 
-    h2 {
-      animation-delay: 0.5s; /* Delay for staggered effect */
-    }
+h2 {
+  animation-delay: 0.5s; /* Delay for staggered effect */
+}
 
-    h3 {
-      animation-delay: 1s;
-    }
+h3 {
+  animation-delay: 1s;
+}
 
-    /* Animation for button */
-   #res{
-      opacity: 0;
-      transform: scale(0.8); /* Shrink initially */
-      animation: popUp 0.8s ease-out forwards;
-      animation-delay: 1.5s; /* Button appears after headings */
-      background:linear-gradient(200deg, #6a11cb, #2575fc);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s ease, transform 0.2s ease; /* Add hover effects */
-    }
+/* Animation for button */
+#res {
+  opacity: 0;
+  transform: scale(0.8); /* Shrink initially */
+  animation: popUp 0.8s ease-out forwards;
+  animation-delay: 1.5s; /* Button appears after headings */
+  background: linear-gradient(200deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease; /* Add hover effects */
+}
 
-    /* Hover effect for button */
-    #res:hover {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      transition: background 0.3s ease, transform 0.2s ease; 
-      transform: scale(1.1); /* Slightly enlarge */
-    }
+/* Hover effect for button */
+#res:hover {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  transition: background 0.3s ease, transform 0.2s ease;
+  transform: scale(1.1); /* Slightly enlarge */
+}
 
-    /* Keyframes for slide-down animation */
-    @keyframes slideDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+/* Keyframes for slide-down animation */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    /* Keyframes for pop-up animation */
-    @keyframes popUp {
-      0% {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
+/* Keyframes for pop-up animation */
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-.home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff00;
+}
+
+spam a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+spam a:hover {
+  color: #00aaff;
+}
+
+/* @media only screen and (max-width: 600px) {
+  .home {
     flex-direction: column;
-    height: 100vh;
-    background-color: #ffffff00;
+  }
+  spam a {
+    margin-bottom: 20px;
+  }
+  spam a:last-child {
+    margin-bottom: 0;
+  }
+} */
+a {
+  text-decoration: none;
+}
+#res {
+  border: 1px solid #ccc;
+  padding: 1.1rem;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-spam a{
-    color: #fcfcfc;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+#res:hover {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  transition: color 0.5s ease-in-out;
 }
 
-spam a:hover{
-    color: #00aaff;
+.abbr {
+  position: relative;
+  text-decoration: dotted underline;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 600px){
-    .home{
-        flex-direction: column;
-    }
-    spam a{
-        margin-bottom: 20px;
-    }
-    spam a:last-child{
-        margin-bottom: 0;
-    }
+.abbr:hover::after {
+  content: attr(data-title); /* Displays custom tooltip text */
+  position: absolute;
+  bottom: -30px; /* Position below the abbreviation */
+  left: 0;
+  background:  linear-gradient(135deg, #6a11cb, #2575fc);
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap; /* Prevents wrapping */
 }
-a{
-    text-decoration: none;
-}
-#res{
-   border: 1px solid #ccc;
-   padding: 1.1rem;
-   color: #fff;
-   font-size: 1.1rem;
-border-radius: 10px;
-font-weight: bold;
-}
-
-#res:hover{
-   background-color: #ffffff;
-   color: #000000;
-   font-weight: bold;
-   transition: color 0.5s ease-in-out;
-}
-
-    .abbr {
-      position: relative;
-      text-decoration: dotted underline;
-      cursor: pointer;
-    }
-
-    .abbr:hover::after {
-      content: attr(data-title); /* Displays custom tooltip text */
-      position: absolute;
-      bottom: -30px; /* Position below the abbreviation */
-      left: 0;
-      background: rgb(253, 250, 250);
-      color: rgb(0, 0, 0);
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 12px;
-      white-space: nowrap; /* Prevents wrapping */
-    }
