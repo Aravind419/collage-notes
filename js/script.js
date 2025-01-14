@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search");
 
   function displaySubjects(filter = "") {
+    // Check if the search term is "contact"
+    if (filter.toLowerCase() === "contact") {
+      showContactForm();
+      return;
+    }
+
     cardContainer.innerHTML = ""; // Clear previous cards
     const filteredSubjects = subjects.filter(
       (subject) =>
@@ -30,6 +36,27 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       cardContainer.appendChild(card);
     });
+  }
+
+  function showContactForm() {
+    cardContainer.innerHTML = `
+      <div id="contact-form">
+        <h2>Contact Us</h2>
+        <form action="/submit_contact" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="phone">Phone:</label>
+          <input type="number" id="number" name="number" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" >
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    `;
   }
 
   // Function to redirect to a specific subject page
