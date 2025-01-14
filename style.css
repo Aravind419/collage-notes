@@ -1,11 +1,84 @@
-body{
+/* body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(0, 0, 0, 0.98);
     text-decoration: none;
     color: #fff;
 
-}
+} */
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Animation for headings */
+    h1, h2, h3 {
+      opacity: 0;
+      transform: translateY(-50px); /* Initial position above */
+      animation: slideDown 1s ease-in-out forwards;
+    }
+
+    h2 {
+      animation-delay: 0.5s; /* Delay for staggered effect */
+    }
+
+    h3 {
+      animation-delay: 1s;
+    }
+
+    /* Animation for button */
+    button {
+      opacity: 0;
+      transform: scale(0.8); /* Shrink initially */
+      animation: popUp 0.8s ease-out forwards;
+      animation-delay: 1.5s; /* Button appears after headings */
+      background: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease, transform 0.2s ease; /* Add hover effects */
+    }
+
+    /* Hover effect for button */
+    button:hover {
+      background: #e91e63;
+      transform: scale(1.1); /* Slightly enlarge */
+    }
+
+    /* Keyframes for slide-down animation */
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Keyframes for pop-up animation */
+    @keyframes popUp {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
 .home{
     display: flex;
